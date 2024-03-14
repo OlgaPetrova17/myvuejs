@@ -1,29 +1,21 @@
 <template>
     <v-app>
-        <v-toolbar app dark class="primary" image="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg">
-            <v-toolbar-title v-text="'My VueJs'"></v-toolbar-title>
-            <v-spacer></v-spacer>
-            <v-toolbar-items>
-                <!-- <v-btn v-for="(item, i) in menuItems" flat: key="'menuItem${i}'" :to="item.route">
-                    <v-icon left v-html="item.icon"></v-icon>
-                    {{ item.title }}
-                    </v-btn> -->
-
-                <v-btn flat: key="'menuItem1'" :to="'/about'"> <v-icon icon="$vuetify"></v-icon> Моя кнопка</v-btn>
-
-                <!-- <p style="color: bisque;">Текст 1 </p>
-                    <p>Текст 2 </p>                    
-                    <p>Текст 3 </p>                    
-                    <p v-for="(b) in menuItems" :key="b.icon" style="color: bisque;" >{{ b.title }}</p> -->
-            </v-toolbar-items>
-        </v-toolbar>
+        <p>Данные {{title}} - {{age}}</p>
+        <p>ФИО {{secondName}} - {{name}}</p>
     </v-app>
 </template>
 
 <script>
-import SvgIcon from '@jamescoyle/vue-icon'
-import { mdiAccount } from '@mdi/js'
 export default {
+    data() {
+        return {
+            age: 4,
+            title: 'Какой-то текст',
+            secondName: 'Петрова',
+            name: 'Ольга'
+        }
+    },
+
     computed: {
         menuItems() {
             return [
