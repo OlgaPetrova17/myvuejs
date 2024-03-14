@@ -1,16 +1,16 @@
 <template>
-    <v-app>
-        <p>Данные {{title}} - {{age}}</p>
-        <p>ФИО {{secondName}} - {{name}}</p>
-    </v-app>
+
+    <h1>Урок № {{ lessonNumber }} : {{  title }}</h1>
+    <p>ФИО {{ secondName }} - {{ name }}</p>
+    <p>{{ menuItems }}</p>
 </template>
 
 <script>
 export default {
     data() {
         return {
-            age: 4,
-            title: 'Какой-то текст',
+            lessonNumber: 1,
+            title: 'Привязка данных',
             secondName: 'Петрова',
             name: 'Ольга'
         }
